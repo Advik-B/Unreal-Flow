@@ -63,3 +63,7 @@ It uses [Dear ImGui](https://github.com/ocornut/imgui) to render the graph.
 - - [ ] Implement the visual editor
 - - [ ] Implement the protobuf parser
 - [ ] Make the compiler transpile to Python
+
+# Libraries used (probably)
+- [Dear ImGui (Python)](https://pypi.org/project/pyimgui/)
+- [Protocol Buffers (Python)](https://pypi.org/project/protobuf/)
