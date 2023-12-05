@@ -14,31 +14,25 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11proto/nodes.proto\"g\n\x08\x42\x61seNode\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x18\n\x0b\x64\x65scription\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x17\n\x04type\x18\x04 \x01(\x0e\x32\t.NodeTypeB\x0e\n\x0c_description\"D\n\x0c\x46unctionNode\x12\x17\n\x04\x62\x61se\x18\x01 \x01(\x0b\x32\t.BaseNode\x12\x1b\n\x08\x63hildren\x18\x02 \x03(\x0b\x32\t.BaseNode\"5\n\tPrintNode\x12\x17\n\x04\x62\x61se\x18\x01 \x01(\x0b\x32\t.BaseNode\x12\x0f\n\x07message\x18\x02 \x01(\t\"3\n\x07LogNode\x12\x17\n\x04\x62\x61se\x18\x01 \x01(\x0b\x32\t.BaseNode\x12\x0f\n\x07message\x18\x02 \x01(\t\"X\n\rConditionNode\x12\x17\n\x04\x62\x61se\x18\x01 \x01(\x0b\x32\t.BaseNode\x12\x11\n\tcondition\x18\x02 \x01(\t\x12\x1b\n\x08\x63hildren\x18\x03 \x03(\x0b\x32\t.BaseNode\"k\n\x06IfNode\x12\x17\n\x04\x62\x61se\x18\x01 \x01(\x0b\x32\t.BaseNode\x12\x11\n\tcondition\x18\x02 \x01(\t\x12\x19\n\x06ifTrue\x18\x03 \x01(\x0b\x32\t.BaseNode\x12\x1a\n\x07ifFalse\x18\x04 \x01(\x0b\x32\t.BaseNode\",\n\nConnection\x12\x0f\n\x07\x66rom_id\x18\x01 \x01(\x05\x12\r\n\x05to_id\x18\x02 \x01(\x05\"G\n\tNodeGraph\x12\x18\n\x05nodes\x18\x01 \x03(\x0b\x32\t.BaseNode\x12 \n\x0b\x63onnections\x18\x02 \x03(\x0b\x32\x0b.Connection*9\n\nDebugLevel\x12\t\n\x05\x44\x45\x42UG\x10\x00\x12\x08\n\x04INFO\x10\x01\x12\x0b\n\x07WARNING\x10\x02\x12\t\n\x05\x45RROR\x10\x03*M\n\x08NodeType\x12\x08\n\x04\x42\x41SE\x10\x00\x12\x0c\n\x08\x46UNCTION\x10\x01\x12\t\n\x05PRINT\x10\x02\x12\x07\n\x03LOG\x10\x03\x12\r\n\tCONDITION\x10\x04\x12\x06\n\x02IF\x10\x05\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11proto/nodes.proto\"}\n\x08\x42\x61seNode\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x17\n\x04type\x18\x03 \x01(\x0e\x32\t.NodeType\x12\x18\n\x0b\x64\x65scription\x18\x04 \x01(\tH\x00\x88\x01\x01\x12\x14\n\x04pins\x18\x05 \x03(\x0b\x32\x06.IOPinB\x0e\n\x0c_description\"\x92\x01\n\x05IOPin\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x16\n\x0cstring_value\x18\x04 \x01(\tH\x00\x12\x13\n\tint_value\x18\x05 \x01(\x05H\x00\x12\x15\n\x0b\x66loat_value\x18\x06 \x01(\x02H\x00\x12\x14\n\nbool_value\x18\x07 \x01(\x08H\x00\x42\x07\n\x05value\",\n\nConnection\x12\x0f\n\x07\x66rom_id\x18\x01 \x01(\x05\x12\r\n\x05to_id\x18\x02 \x01(\x05\"`\n\x0cNodeFunction\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x16\n\x06inputs\x18\x03 \x03(\x0b\x32\x06.IOPin\x12\x15\n\rfirst_node_id\x18\x04 \x01(\x05\"G\n\tNodeGraph\x12\x18\n\x05nodes\x18\x01 \x03(\x0b\x32\t.BaseNode\x12 \n\x0b\x63onnections\x18\x02 \x03(\x0b\x32\x0b.Connection*9\n\nDebugLevel\x12\t\n\x05\x44\x45\x42UG\x10\x00\x12\x08\n\x04INFO\x10\x01\x12\x0b\n\x07WARNING\x10\x02\x12\t\n\x05\x45RROR\x10\x03*?\n\x08NodeType\x12\x08\n\x04\x42\x41SE\x10\x00\x12\t\n\x05PRINT\x10\x02\x12\x07\n\x03LOG\x10\x03\x12\r\n\tCONDITION\x10\x04\x12\x06\n\x02IF\x10\x05\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'proto.nodes_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_DEBUGLEVEL']._serialized_start=622
-  _globals['_DEBUGLEVEL']._serialized_end=679
-  _globals['_NODETYPE']._serialized_start=681
-  _globals['_NODETYPE']._serialized_end=758
+  _globals['_DEBUGLEVEL']._serialized_start=514
+  _globals['_DEBUGLEVEL']._serialized_end=571
+  _globals['_NODETYPE']._serialized_start=573
+  _globals['_NODETYPE']._serialized_end=636
   _globals['_BASENODE']._serialized_start=21
-  _globals['_BASENODE']._serialized_end=124
-  _globals['_FUNCTIONNODE']._serialized_start=126
-  _globals['_FUNCTIONNODE']._serialized_end=194
-  _globals['_PRINTNODE']._serialized_start=196
-  _globals['_PRINTNODE']._serialized_end=249
-  _globals['_LOGNODE']._serialized_start=251
-  _globals['_LOGNODE']._serialized_end=302
-  _globals['_CONDITIONNODE']._serialized_start=304
-  _globals['_CONDITIONNODE']._serialized_end=392
-  _globals['_IFNODE']._serialized_start=394
-  _globals['_IFNODE']._serialized_end=501
-  _globals['_CONNECTION']._serialized_start=503
-  _globals['_CONNECTION']._serialized_end=547
-  _globals['_NODEGRAPH']._serialized_start=549
-  _globals['_NODEGRAPH']._serialized_end=620
+  _globals['_BASENODE']._serialized_end=146
+  _globals['_IOPIN']._serialized_start=149
+  _globals['_IOPIN']._serialized_end=295
+  _globals['_CONNECTION']._serialized_start=297
+  _globals['_CONNECTION']._serialized_end=341
+  _globals['_NODEFUNCTION']._serialized_start=343
+  _globals['_NODEFUNCTION']._serialized_end=439
+  _globals['_NODEGRAPH']._serialized_start=441
+  _globals['_NODEGRAPH']._serialized_end=512
 # @@protoc_insertion_point(module_scope)
