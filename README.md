@@ -3,9 +3,9 @@
 
 > ⚠️ **PROJECT STATUS: Currently in development. NOT USABLE YET.**
 
-
 **Table of Contents**
-- [What is UnrealFlow?](#what-is-UnrealFlow)
+- [Unreal Flow](#unreal-flow)
+- [What is UnrealFlow?](#what-is-unrealflow)
 - [What it is and what it is not](#what-it-is-and-what-it-is-not)
   - [What it is](#what-it-is)
   - [What it is not](#what-it-is-not)
@@ -14,7 +14,8 @@
   - [The compiler](#the-compiler)
   - [The interpreter](#the-interpreter)
   - [The visual editor/node graph](#the-visual-editornode-graph)
-- [Future plans](#future-plans)
+  - [Future plans](#future-plans)
+- [Libraries used (probably)](#libraries-used-probably)
 
 
 # What is UnrealFlow?
