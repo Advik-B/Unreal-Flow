@@ -7,13 +7,13 @@ message BaseNode {
     string name = 2;
     NodeType type = 3;
     optional string description = 4;
-    repeated IOPin pins = 5;
+    repeated IOpin pins = 5;
     string code = 6;
 
 }
 
 // Input and output pins
-message IOPin {
+message IOpin {
     int32 id = 1;
     string name = 2;
     string type = 3;
@@ -55,7 +55,7 @@ enum NodeType {
 message NodeFunction {
     string name = 1;
     string description = 2;
-    repeated IOPin inputs = 3;
+    repeated IOpin inputs = 3;
     int32 first_node_id = 4;
 }
 
