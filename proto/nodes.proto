@@ -76,7 +76,7 @@ enum NodeType {
 
 // A graph that contains a list of nodes and a list of connections
 
-message Graph {
+message NodeGraph {
     repeated BaseNode nodes = 1;
     repeated Connection connections = 2;
 }
