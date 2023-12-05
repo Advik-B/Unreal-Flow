@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "nodes.proto";
+import "proto/nodes.proto";
 
 message TimeStamp {
   uint32 day = 1;
