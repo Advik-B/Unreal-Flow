@@ -5,23 +5,24 @@ syntax = "proto3";
 message BaseNode {
     int32 id = 1;
     string name = 2;
-    optional string description = 3;
-    NodeType type = 4;
+    NodeType type = 3;
+    optional string description = 4;
+    repeated IOPin pins = 5;
+    string code = 6;
+
 }
 
-// A function node extends a base node and has a list of nodes as children (order matters)
-
-message FunctionNode {
-    BaseNode base = 1;
-    repeated BaseNode children = 2;
-}
-
-
-// A print node extends a base node and prints a message to the console (NO MATTER THE DEBUG LEVEL)
-
-message PrintNode {
-    BaseNode base = 1;
-    string message = 2;
+// Input and output pins
+message IOPin {
+    int32 id = 1;
+    string name = 2;
+    string type = 3;
+    oneof value {
+        string string_value = 4;
+        int32 int_value = 5;
+        float float_value = 6;
+        bool bool_value = 7;
+    }
 }
 
 // A enum node that stores the debug level
@@ -31,29 +32,6 @@ enum DebugLevel {
     INFO = 1;
     WARNING = 2;
     ERROR = 3;
-}
-
-
-// A log node extends a base node and logs a message (only if the debug level is high enough)
-
-message LogNode {
-
-    BaseNode base = 1;
-    string message = 2;
-
-}
-
-message ConditionNode {
-    BaseNode base = 1;
-    string condition = 2;
-    repeated BaseNode children = 3;
-}
-
-message IfNode {
-    BaseNode base = 1;
-    string condition = 2;
-    BaseNode ifTrue = 3;
-    BaseNode ifFalse = 4;
 }
 
 // A connection between two nodes
@@ -67,11 +45,18 @@ message Connection {
 
 enum NodeType {
     BASE = 0;
-    FUNCTION = 1;
     PRINT = 2;
     LOG = 3;
     CONDITION = 4;
     IF = 5;
+}
+
+// A node function
+message NodeFunction {
+    string name = 1;
+    string description = 2;
+    repeated IOPin inputs = 3;
+    int32 first_node_id = 4;
 }
 
 // A graph that contains a list of nodes and a list of connections
