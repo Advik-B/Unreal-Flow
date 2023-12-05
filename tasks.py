@@ -18,6 +18,6 @@ def check_compiler(c):
 
 
 @task
-def proto(c, docs=False):
+def proto(c):
     check_compiler(c)
     c.run("protoc proto/*.proto --python_out=src/")
