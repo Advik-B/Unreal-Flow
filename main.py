@@ -19,3 +19,8 @@ for i in range(10):
         connection.to_id = i
 
 print(node_graph)
+
+# Export to file
+with open("node_graph.bin", "wb") as f:
+    f.write(node_graph.SerializeToString())
+
