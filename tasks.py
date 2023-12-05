@@ -4,6 +4,11 @@ import os
 def is_windows():
     return os.name == 'nt'
 
+PYTHON = 'python'
+PIP = 'pip'
+PYTHON += '.exe' if is_windows() else '3'
+PIP += '.exe' if is_windows() else PYTHON+' -m pip'
+
 
 @task
 def check_compiler(c):
@@ -21,3 +26,7 @@ def check_compiler(c):
 def proto(c):
     check_compiler(c)
     c.run("protoc proto/*.proto --python_out=src/")
+
+@task
+def requirements(c):
+    c.run(PIP + " install -r requirements.txt")
