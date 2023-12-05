@@ -30,3 +30,11 @@ def proto(c):
 @task
 def requirements(c):
     c.run(PIP + " install -r requirements.txt")
+
+@task
+def build(c):
+    print("Not implemented yet")
+    return
+    # proto(c)
+    # requirements(c)
+
