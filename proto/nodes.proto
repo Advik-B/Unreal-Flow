@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+// A node (like a block in unreal engine blueprint)
+
+message BaseNode {
+    int32 id = 1;
+    string name = 2;
+    string description = 3;
+    NodeType type = 4;
+}
+
+// A function node extends a base node and has a list of nodes as children (order matters)
+
+message FunctionNode {
+    BaseNode base = 1;
+    repeated BaseNode children = 2;
+}
+
+
+// A print node extends a base node and prints a message to the console (NO MATTER THE DEBUG LEVEL)
+
+message PrintNode {
+    BaseNode base = 1;
+    string message = 2;
+}
+
+// A enum node that stores the debug level
+
+enum DebugLevel {
+    DEBUG = 0;
+    INFO = 1;
+    WARNING = 2;
+    ERROR = 3;
+}
+
+
+// A log node extends a base node and logs a message (only if the debug level is high enough)
+
+message LogNode {
+
+    BaseNode base = 1;
+    string message = 2;
+
+}
+
+message ConditionNode {
+    BaseNode base = 1;
+    string condition = 2;
+    repeated BaseNode children = 3;
+}
+
+message IfNode {
+    BaseNode base = 1;
+    string condition = 2;
+    BaseNode ifTrue = 3;
+    BaseNode ifFalse = 4;
+}
+
+// A connection between two nodes
+
+message Connection {
+    int32 from = 1;
+    int32 to = 2;
+}
+
+// A Node type that can be any direct inheritant of BaseNode
+
+enum NodeType {
+    BASE = 0;
+    FUNCTION = 1;
+    PRINT = 2;
+    LOG = 3;
+    CONDITION = 4;
+    IF = 5;
+}
+
+// A graph that contains a list of nodes and a list of connections
+
+message Graph {
+    repeated BaseNode nodes = 1;
+    repeated Connection connections = 2;
+}
+
