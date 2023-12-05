@@ -25,7 +25,7 @@ Here is how to quickly get started with the development environment.
 ## Run
 ```
 cd src
-python -m unrealflow
+python -m UnrealFlow
 ```
 
 ## Build
