@@ -5,6 +5,7 @@
 
 **Table of Contents**
 - [Unreal Flow](#unreal-flow)
+- [Note for the developers](#note-for-the-developers)
 - [What is UnrealFlow?](#what-is-unrealflow)
 - [What it is and what it is not](#what-it-is-and-what-it-is-not)
   - [What it is](#what-it-is)
@@ -17,6 +18,9 @@
   - [Future plans](#future-plans)
 - [Libraries used (probably)](#libraries-used-probably)
 
+
+# Note for the developers
+See [DEVELOPERS.md](DEVELOPERS.md) for development related information and instructions.
 
 # What is UnrealFlow?
 
