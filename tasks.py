@@ -25,7 +25,7 @@ def check_compiler(c):
 @task
 def proto(c):
     check_compiler(c)
-    c.run("protoc proto/*.proto --python_out=src/")
+    c.run("protoc proto/*.proto --pyi_out=src/ --python_out=src/ ")
 
 @task
 def requirements(c):
