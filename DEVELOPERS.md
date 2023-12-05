@@ -5,7 +5,7 @@ Here is how to quickly get started with the development environment.
 ## Prerequisites
 - Python 3.9+
 - pip (That is linked to Python 3.9+)
-- Protobuf compiler (protoc) (Get it from [here](https://github.com/protocolbuffers/protobuf/releases/latest))
+- Protobuf compiler in the PATH (protoc) (Get it from [here](https://github.com/protocolbuffers/protobuf/releases/latest))
 
 ## Setup
 1. Clone the repository
