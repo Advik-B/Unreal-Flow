@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "nodes.proto";
+
+message TimeStamp {
+  uint32 day = 1;
+  uint32 month = 2;
+  uint32 year = 3;
+  uint32 hour = 4;
+  uint32 minute = 5;
+  uint32 second = 6;
+}
+
+message Author {
+  string name = 1;
+  optional string email = 2;
+  optional string extra = 3;
+}
+
+message FlowVersion {
+  uint32 major = 1;
+  uint32 minor = 2;
+  uint32 patch = 3;
+}
+
+message FlowProject {
+  string name = 1;
+  optional string description = 2;
+  FlowVersion version = 3;
+  repeated Author authors = 4;
+  repeated NodeGraph graphs = 5;
+  TimeStamp created = 6;
+  TimeStamp modified = 7;
+  string tags = 8;
+}
+
